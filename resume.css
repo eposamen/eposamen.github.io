@@ -1,5 +1,5 @@
 body {
-	/*position: absolute;*/
+	
 	background-image: url('background.jpg');
 	/*background-attachment: fixed;*/
 	background-repeat: no-repeat;
@@ -21,7 +21,6 @@ div {
 
 h1 {
 	
-	/*background-position: top left;*/
 	font-variant: small-caps;
 
 	margin: 10px;
@@ -32,8 +31,41 @@ h1 {
 
 }
 
+h2 {
+	text-indent: 10px;
+	font-variant: small-caps;
+	font-size: 25px;
+
+}
+
+h3 {
+	text-indent: 40px;
+	font-size: 16px;
+}
+
+h3.floatright {
+	text-indent: 40px;
+	font-size: 16px;
+}
+
+.floatright {
+	float: right;
+
+}
+
 a {
 	font-family: "Gill Sans", sans-serif;
+}
+
+ul {
+	list-style-position: inside;
+	text-indent: 1.5em;
+}
+
+p {
+	font-style: italic;
+	text-indent: 40px;
+	
 }
 
 img {
@@ -42,6 +74,7 @@ img {
 	margin: 10px;
 	padding: 10px;
 	float: right;
-
-
+	border-radius: 100px;
 }
+
+
