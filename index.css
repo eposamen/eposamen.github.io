@@ -7,13 +7,12 @@ body {
 	margin-right: auto;
 	text-align: center;
 	color: black;
-	
+
 }
 
 div {
 	background-image: url('h1.png');
 	text-align: center;
-	position: relative;
 	width: 1000px;
 	margin: 10px;
 	padding: 10px;
