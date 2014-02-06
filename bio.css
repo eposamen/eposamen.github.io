@@ -1,39 +1,29 @@
 body {
-	/*position: absolute;*/
 	background-image: url('background.jpg');
-	/*background-attachment: fixed;*/
 	background-repeat: no-repeat;
 	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+	font-family: "Gill Sans", sans-serif;
 	
 }
 
 div {
 	background-image: url('h1.png');
-	
 	position: relative;
 	margin: 10px;
 	padding: 10px;
-	font-family: "Gill Sans", sans-serif;
+	
 
 }
 
 h1 {
-	
-	/*background-position: top left;*/
 	font-variant: small-caps;
-
 	margin: 10px;
 	margin-top: 0;
 	padding: 10px;
 	text-align: center;
-	font-family: "Gill Sans", sans-serif;
 
-}
-
-a {
-	font-family: "Gill Sans", sans-serif;
 }
 
 img {
@@ -42,6 +32,8 @@ img {
 	margin: 10px;
 	padding: 10px;
 	float: right;
+}
 
-
+p {
+	font-size: 20px;
 }
