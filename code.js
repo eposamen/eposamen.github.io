@@ -6,9 +6,10 @@ var allStations;
 var allDistances;
 var jsonSched;
 var me = new google.maps.LatLng(myLat, myLng);
+var panToMark = new google.maps.LatLng(42.41342, -70.991648);
 var myOptions = {
 			zoom: 13, 
-			center: me,
+			center: panToMark,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 var map;
@@ -32,7 +33,6 @@ function dataReady() {
 			scheduleDom = document.getElementById("map_canvas");
 			error();
 	}
-
 }
 
 function error()
@@ -93,7 +93,9 @@ function renderMap()
 {
 
 	me = new google.maps.LatLng(myLat, myLng);
-	map.panTo(me);
+	//map.panTo(me);
+	panToMark = new google.maps.LatLng(42.41342, -70.991648);
+	map.panTo(panToMark);
 
 	var meMarker = new google.maps.Marker({
 		position: me,
