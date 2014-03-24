@@ -6,11 +6,11 @@ var allStations;
 var allDistances;
 var jsonSched;
 var me = new google.maps.LatLng(myLat, myLng);
-var panLat = 42.3581;
-var panLng = -71.0636;
+var panLat = 42.361972;
+var panLng = -71.062135;
 var panToMark = new google.maps.LatLng(panLat, panLng);
 var myOptions = {
-			zoom: 15, 
+			zoom: 10, 
 			center: panToMark,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
