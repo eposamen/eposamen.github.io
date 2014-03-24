@@ -101,7 +101,9 @@ function getMyLocation()
 }
 
 function renderMap() {
-
+	var jsonBlue = JSON.parse(bluetxt);
+	var jsonOrange = JSON.parse(orangetxt);
+	
 	me = new google.maps.LatLng(myLat, myLng);
 	//map.panTo(me);
 	panToMark = new google.maps.LatLng(42.41342, -70.991648);
@@ -116,12 +118,12 @@ function renderMap() {
 	meMarker.setMap(map);
 
 	if (jsonSched["line"] == "blue") {
-		var jsonBlue = JSON.parse(bluetxt);
+		//var jsonBlue = JSON.parse(bluetxt);
 		createPath(jsonBlue, bluetxt);
 	}
 
 	else if (jsonSched["line"] == "orange") {
-		var jsonOrange = JSON.parse(orangetxt);
+		//var jsonOrange = JSON.parse(orangetxt);
 		createPath(jsonOrange, orangeInfo);
 	}
 	else if (jsonSched["line"] == "red") {
