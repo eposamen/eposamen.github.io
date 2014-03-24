@@ -23,11 +23,11 @@ var orangetxt = '[{"station":"Oak Grove","lat":42.43668,"lng":-71.07109699999999
 var redtxt = '[{"station":"Alewife","lat":42.395428,"lng":-71.142483},{"station":"Davis","lat":42.39674,"lng":-71.121815},{"station":"Porter Square","lat":42.3884,"lng":-71.11914899999999},{"station":"Harvard Square","lat":42.373362,"lng":-71.118956},{"station":"Central Square","lat":42.365486,"lng":-71.103802},{"station":"Kendall/MIT","lat":42.36249079,"lng":-71.08617653},{"station":"Charles/MGH","lat":42.361166,"lng":-71.070628},{"station":"Park Street","lat":42.35639457,"lng":-71.0624242},{"station":"Downtown Crossing","lat":42.355518,"lng":-71.060225},{"station":"South Station","lat":42.352271,"lng":-71.05524200000001},{"station":"Broadway","lat":42.342622,"lng":-71.056967},{"station":"Andrew","lat":42.330154,"lng":-71.057655},{"station":"JFK/UMass","lat":42.320685,"lng":-71.052391},{"station":"North Quincy","lat":42.275275,"lng":-71.029583},{"station":"Wollaston","lat":42.2665139,"lng":-71.0203369},{"station":"Quincy Center","lat":42.251809,"lng":-71.005409},{"station":"Quincy Adams","lat":42.233391,"lng":-71.007153},{"station":"Braintree","lat":42.2078543,"lng":-71.0011385},{"station":"Savin Hill","lat":42.31129,"lng":-71.053331},{"station":"Fields Corner","lat":42.300093,"lng":-71.061667},{"station":"Shawmut","lat":42.29312583,"lng":-71.06573796000001},{"station":"Ashmont","lat":42.284652,"lng":-71.06448899999999}]';
 //var blueNumStations = 12;
 //var blueInfo = JSON.parse('["color":"#0000FF", "numStops:":12, "icon":"markerblue.png"]');
-var blueInfo = '["color":"#0000FF", "numStops:":12, "icon":"markerblue.png"]';
+var blueInfo = '{"color":"#0000FF", "numStops:":12, "icon":"markerblue.png"}';
 //var orangeNumStations = 19;
-var orangeInfo = '["color":"#ff9c00", "numStops:":19, "icon":"markerorange.png"]';
+var orangeInfo = '{"color":"#ff9c00", "numStops:":19, "icon":"markerorange.png"}';
 //var redNumStations = 22;
-var redInfo = '["color":"#FF0000", "numStops:":22, "icon":"markerred.png"]';
+var redInfo = '{"color":"#FF0000", "numStops:":22, "icon":"markerred.png"}';
 function init() {
 		req = new XMLHttpRequest();
 		req.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
