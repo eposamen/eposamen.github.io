@@ -99,8 +99,7 @@ function getMyLocation()
 	}
 }
 
-function renderMap()
-{
+function renderMap() {
 
 	me = new google.maps.LatLng(myLat, myLng);
 	//map.panTo(me);
@@ -133,7 +132,6 @@ function renderMap()
 			var newLng = jsonRed[i]["lng"];
 			var latlng = new google.maps.LatLng(newLat, newLng);
 			if (i == 12) {
-				
 				redLineStops2.push(latlng);
 			}
 			if (i < 18) {
@@ -160,7 +158,6 @@ function renderMap()
 					infowindow.open(map, stopMarker);  
 				}  
 			})(stopMarker));
-
 		}
 
 		var redPath1 = new google.maps.Polyline({
@@ -178,7 +175,7 @@ function renderMap()
 			strokeWeight: 2
 		}); 
 		redPath2.setMap(map);
-	}	
+	}
 	
 /*
 	if (jsonSched["line"] == "blue") {
@@ -284,8 +281,6 @@ function renderMap()
 		infowindow.setContent(content);
 		infowindow.open(map, meMarker);
 	});
-
-
 }
 
 function writeMeInfo(meMarker, json)
@@ -476,7 +471,7 @@ function createPath(lineInfo, lineText) {
 	
 	var jsonInfo = JSON.parse(lineText);
 	var lineStops = [];
-	for (station in jsonInfo)
+	for (station in jsonInfo) {
 		//var newLat = jsonBlue[i]["lat"];
 		var newLat = station["lat"];
 		//var newLng = jsonBlue[i]["lng"];
