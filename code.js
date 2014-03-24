@@ -474,7 +474,7 @@ function createPath(lineInfo, lineText) {
 	
 	//var jsonInfo = JSON.parse(lineText);
 	var lineStops = [];
-	for (station in jsonInfo) {
+	for (station in lineInfo) {
 		//var newLat = jsonBlue[i]["lat"];
 		var newLat = station["lat"];
 		//var newLng = jsonBlue[i]["lng"];
