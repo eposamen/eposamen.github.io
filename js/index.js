@@ -44,17 +44,17 @@ function earthwatchObject() {
 			},
 			{
 				"src": "https://farm4.staticflickr.com/3802/11575675933_c9eab8c2aa_o.jpg",
-				"alt": "Face : 1",
+				"alt": "Face 1",
 				"sub-gallery": "faces"
 			},
 			{
 				"src": "https://farm8.staticflickr.com/7446/11575797954_2f5b89de16_o.jpg",
-				"alt": "Face : 2",
+				"alt": "Face 2",
 				"sub-gallery": "faces"
 			},
 			{
 				"src": "https://farm6.staticflickr.com/5513/11576252706_b6137fc170_o.jpg",
-				"alt": "Face : 3",
+				"alt": "Face 3",
 				"sub-gallery": "faces"
 			},
 			{
@@ -142,9 +142,47 @@ function earthwatchObject() {
 				$(galleryId).append(imgString);
 			};
 
+
 			
 
 		};
+		$(".gallery").each(function() {
+			var artwork = $(".gallery").children();
+			console.log(artwork);
+			var totalWidth = 0;
+			var that = this;
+
+			$(artwork).each(function() {
+				var url = $(this).attr("src");
+				$(artwork[i]).attr("src", url).load(function(){  
+					
+					console.log("outerWidth = "+$(this).width())
+					totalWidth = totalWidth + $(this).outerWidth(true);
+					
+					$(that).width(totalWidth);
+					
+				}); 
+			})
+
+
+			// for (var i = 0; i < artwork.length; i++) {
+			// 	var url = $(artwork[i]).attr("src");
+			// 	$(artwork[i]).attr("src", url).load(function(){  
+					
+			// 		console.log("outerWidth = "+$(this).width())
+			// 		totalWidth = totalWidth + $(this).outerWidth(true);
+			// 		if (i+1 == artwork.length) {
+			// 			console.log("totalWidth = "+totalWidth);
+			// 			$(that).width(totalWidth);
+			// 		};
+			// 	}); 
+				
+			// };
+			
+			
+		})
+
+
 
 	}
 
@@ -193,6 +231,47 @@ function earthwatchObject() {
 		    });
 		 });
 
+	    var count;
+    	var interval;
+	    $("#arrow-left").on('mouseover', function() {
+	        var div = $('.gallery-wrapper');
+
+	        interval = setInterval(function(){
+	            count = count || 1;
+	            var pos = div.scrollLeft();
+	            div.scrollLeft(pos - count);
+	            console.log("scrolling left");
+	        }, 7);
+	    }).click(function() {
+	        if (count < 6) {
+	             count = count+1;
+	        }
+	    }).on('mouseout', function() {
+	        // Uncomment this line if you want to reset the speed on out
+	        // count = 0;
+	        clearInterval(interval);
+	    });
+
+
+	    $("#arrow-right").on('mouseover', function() {
+	        var div = $('.gallery-wrapper');
+
+	        interval = setInterval(function(){
+	            count = count || 1;
+	            var pos = div.scrollLeft();
+	            div.scrollLeft(pos + count);
+	            console.log("scrolling right");
+	        }, 7);
+	    }).click(function() {
+	        if (count < 6) {
+	             count = count+1;
+	        }
+	    }).on('mouseout', function() {
+	        // Uncomment this line if you want to reset the speed on out
+	        // count = 0;
+	        clearInterval(interval);
+	    });
+
 	}
 
 	this.colorRandom = function() {
@@ -213,7 +292,7 @@ function earthwatchObject() {
 		})
 		$(".ep-navsection").mouseout(function() {
 			$(this).css("color", "#fff");
-			$(this).css("border-bottom", "solid 4px #a4bcce");
+			$(this).css("border-bottom", "solid 4px #778997");
 		})
 
 		$(".carousel-control").css("color", color);

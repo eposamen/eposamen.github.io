@@ -59,8 +59,8 @@ div.relative {
 
 .row.ep-navbar {
 	height: 50px;
-	background-color: #a4bcce;
-	border-top: solid 4px #a4bcce;
+	background-color: #778997;
+	border-top: solid 4px #778997;
 	
 	border-left: none;
 	border-right: none;
@@ -77,7 +77,7 @@ div.relative {
 
 .ep-navbar-content {
 	width: 100%;
-	border-top: solid 4px #a4bcce;
+	border-top: solid 4px #778997;
 	height: 100%;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -127,10 +127,11 @@ div.relative {
 	height: 100%;
 	font-weight: bold;
 	font-size: 1.6vw;
+	line-height: 38px;
 	text-align: center;
 	width: 25%;
 	float: left;
-	border-bottom: solid 5px #a4bcce;
+	border-bottom: solid 5px #778997;
 
 	-webkit-transition: all 0.70s ease-in-out;
 	-moz-transition: all 0.70s ease-in-out;
@@ -140,7 +141,7 @@ div.relative {
 
 .ep-navsection:hover {
 	color: #fbcf85;
-	border-bottom: solid 5px #a4bcce;
+	border-bottom: solid 5px #778997;
 	text-decoration: none;
 	/*border-bottom: solid 5px #fbcf85;*/
 	-webkit-transition: all 0.70s ease-in-out;
@@ -190,7 +191,7 @@ div.relative {
 }
 
 .footer {
-	background-color: #a4bcce;
+	background-color: #778997;
 	height: auto;
 	font-size: 20px;
 	padding-top: 10px;
@@ -202,7 +203,6 @@ div.relative {
 .art-category {
 	position: relative;
 	/*padding: 0;*/
-
 
 
 }
@@ -370,8 +370,43 @@ margin: 0 auto;
 
 .gallery-wrapper {
 	overflow: scroll;
-	width: 100%;
+	width: 95%;
+/*	margin-left: 5%;
+	margin-right: 5%;*/
+	float: left;
 }
+
+.arrow{
+	font-size: 40px;
+	line-height: 40px;
+	width: 2.5%;
+	float: left;
+	text-align: center;
+	height: 400px;
+	padding-top: 180px;
+
+	padding-bottom: 180px;
+
+}
+
+#arrow-left {
+	padding-right: 10px;
+}
+
+#arrow-right {
+	padding-left: 10px;
+}
+
+
+.arrow:hover {
+	text-shadow: 2px 2px 5px rgba(0,0,0,.3);
+
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+}
+
 
 .gallery {
 	/*max-width: 100%; */
@@ -434,9 +469,15 @@ margin: 0 auto;
 	
 }
 
+.skill-icons {
+	margin-top: -15px;
+}
+
 .skills-text {
-	margin-top: 20px;
+	
 	font-size: 20px;
+	padding: 0;
+	margin-left: -20px;
 }
 
 #artwork-section {
