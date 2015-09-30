@@ -45,11 +45,17 @@ div.relative {
 	height: 30vh;
 	margin-top: 35vh;
 	margin-bottom: 35vh;
-	background-color: rgba(255, 255, 255, 0.5);
+	/*background-color: rgba(255, 255, 255, 0.5);*/
 /*	border: 5px solid transparent;
 	outline: 5px solid rgba(255, 255, 255, 0.5);*/
 }
 
+.mobile-text {
+	background-color: rgba(255, 255, 255, 0.5);
+	display: inline;
+	font-size: 20px;
+	padding: 10px;
+}
 
 .row.ep-navbar {
 	height: 50px;
@@ -450,6 +456,10 @@ margin: 0 auto;
 
 }
 
+#experience-section {
+	padding-top: 50px;
+}
+
 .experience-job-title {
 	font-size: 18px;
 	font-weight: bold;
@@ -497,7 +507,16 @@ margin: 0 auto;
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
+	.header-text {
+		width: 100%;
 
+	}
+	.main-header {
+		-moz-box-shadow: none;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;
+
+	}
 }
 
 /* Extra Small Devices, Phones */
