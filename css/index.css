@@ -1,0 +1,534 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	color: #3d3d3d;
+}
+
+.ep-header {
+	position: relative;
+	overflow: hidden;
+	height: calc(100vh - 50px);
+	width: 100%;
+}
+
+.ep-header-title {
+
+
+}
+
+.row {
+	margin: 0 !important;
+}
+.height-100-vh {
+
+}
+
+div.relative {
+    position: relative;
+    width: 100%;
+    /*height: 100vh;*/
+    /*border: 3px solid #8AC007;*/
+} 
+
+.absolute {
+    position: absolute;
+    /*top: 80px;*/
+    /*right: 0*/
+    /*width: 200px;*/
+    /*height: 100px;*/
+    /*border: 3px solid #8AC007;*/
+}
+
+.header-text {
+	z-index: 1;
+	padding: 20px;
+	font-family: 'Raleway', sans-serif;
+	height: 30vh;
+	margin-top: 35vh;
+	margin-bottom: 35vh;
+	background-color: rgba(255, 255, 255, 0.5);
+/*	border: 5px solid transparent;
+	outline: 5px solid rgba(255, 255, 255, 0.5);*/
+}
+
+
+.row.ep-navbar {
+	height: 50px;
+	background-color: #a4bcce;
+	border-top: solid 4px #a4bcce;
+	
+	border-left: none;
+	border-right: none;
+	border: none;
+
+
+}
+
+.main-header {
+	-moz-box-shadow: inset 0 -30px 30px -30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 -30px 30px -30px rgba(0,0,0,0.3);
+    box-shadow: inset 0 -30px 30px -30px rgba(0,0,0,0.3);
+}
+
+.ep-navbar-content {
+	width: 100%;
+	border-top: solid 4px #a4bcce;
+	height: 100%;
+	padding-left: 10%;
+	padding-right: 10%;
+
+
+}
+
+#nav-wrapper {
+	width: 100%;
+	z-index: 2000;
+}
+
+#nav-top {
+	
+}
+/*
+#nav-wrapper {  position:relative; float:left;
+
+ }
+#nav-top {
+	background-color:#000;
+	height:20px;
+	color:#fff;
+	padding:2px;
+	width:1000px;
+	float:left;
+	position:relative;
+	top:660px;
+	float:left;
+}
+*/
+.right-border {
+	/*border-right: solid 4px #fff;*/
+}
+
+.float-left {
+	float: left;
+}
+
+
+.float-right {
+	float: right;
+}
+
+.ep-navsection {
+	color: #fff;
+	height: 100%;
+	font-weight: bold;
+	font-size: 1.6vw;
+	text-align: center;
+	width: 25%;
+	float: left;
+	border-bottom: solid 5px #a4bcce;
+
+	-webkit-transition: all 0.70s ease-in-out;
+	-moz-transition: all 0.70s ease-in-out;
+	-ms-transition: all 0.70s ease-in-out;
+	-o-transition: all 0.70s ease-in-out;
+}
+
+.ep-navsection:hover {
+	color: #fbcf85;
+	border-bottom: solid 5px #a4bcce;
+	text-decoration: none;
+	/*border-bottom: solid 5px #fbcf85;*/
+	-webkit-transition: all 0.70s ease-in-out;
+	-moz-transition: all 0.70s ease-in-out;
+	-ms-transition: all 0.70s ease-in-out;
+	-o-transition: all 0.70s ease-in-out;
+
+}
+
+.header-img {
+	/*width: 100%;*/
+	height: 100%;
+	width: auto;
+/*	position: absolute;
+	top: 0;*/
+	float: right;
+	right:0;
+	overflow: hidden;
+	/*margin-left: -15px;*/
+	z-index: -1;
+}
+
+.no-padding {
+	padding: 0px !important;
+}
+
+
+.no-margin {
+	margin: 0 !important;
+}
+
+
+.text-grey {
+	color: #65737e;
+}
+
+
+.ep-content {
+	background-color: #fff;
+	padding-top: 50px;
+}
+
+.mail-icon-img {
+	height: 40px;
+	width: auto;
+
+}
+
+.footer {
+	background-color: #a4bcce;
+	height: auto;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+	margin-top: 100px;
+}
+
+.art-category {
+	position: relative;
+	/*padding: 0;*/
+
+
+
+}
+
+.art-category > a {
+	text-decoration: none;
+	color: #3d3d3d;
+}
+
+.art-cat-img {
+	overflow: hidden;
+	position: relative;
+	/*z-index: 9;*/
+	/*margin: -10px;*/
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: all 0.50s ease-in-out;
+	-moz-transition: all 0.50s ease-in-out;
+	-ms-transition: all 0.50s ease-in-out;
+	-o-transition: all 0.50s ease-in-out;
+}
+
+.art-category:hover > a > .art-cat-img {
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	-webkit-transition: all 0.50s ease-in-out;
+	-moz-transition: all 0.50s ease-in-out;
+	-ms-transition: all 0.50s ease-in-out;
+	-o-transition: all 0.50s ease-in-out;
+
+}
+
+.art-category:hover > a > .click-block {
+	opacity: 1;
+	-webkit-transition: all 0.50s ease-in-out;
+	-moz-transition: all 0.50s ease-in-out;
+	-ms-transition: all 0.50s ease-in-out;
+	-o-transition: all 0.50s ease-in-out;
+}
+
+.art-cat-img >img {
+	width: 100%;
+	height: auto;
+	max-height: 450px;
+
+
+	-webkit-transition: all 0.50s ease-in-out;
+	-moz-transition: all 0.50s ease-in-out;
+	-ms-transition: all 0.50s ease-in-out;
+	-o-transition: all 0.50s ease-in-out;
+/*	margin: -10px;*/
+}
+
+.glass {
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	
+}
+
+
+.click-to-view, .click-block {
+	position: absolute;
+
+	-webkit-transition: all 0.50s ease-in-out;
+	-moz-transition: all 0.50s ease-in-out;
+	-ms-transition: all 0.50s ease-in-out;
+	-o-transition: all 0.50s ease-in-out;
+}
+/*
+.click-to-view {
+	width: 100%;
+
+	height: 100%;
+	max-height: 450px;
+	background-color: rgba(255,255,255, 0.5);
+
+}
+*/
+
+
+.click-block {
+  text-align: center;
+  width: 100%;
+  /*box-sizing: border-box;*/
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 100%;
+  max-height: 450px;
+  color:rgba(255,255,255, 0.5);
+  opacity: 0;
+  z-index: 10;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+
+  /*display: none;*/
+
+  /* May want to do this if there is risk the container may be narrower than the element inside */
+  white-space: nowrap;
+	-webkit-transition: all 0.50s ease-in-out;
+	-moz-transition: all 0.50s ease-in-out;
+	-ms-transition: all 0.50s ease-in-out;
+	-o-transition: all 0.50s ease-in-out;
+}
+
+
+
+
+ 
+/* The ghost, nudged to maintain perfect centering */
+.click-block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */ 
+.click-to-view-text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.carousel-inner, .carousel-inner>.item {
+	text-align: center;
+	left: none;
+}
+
+.carousel-inner>.item>img {
+	/*max-height: 60vh;*/
+	width: 100%;
+	height: auto;
+margin: 0 auto;
+
+}
+
+
+.carousel-control {
+	background-image: none !important;
+}
+
+/*
+.item > img {
+	height: 100%;
+	width: auto;
+
+}*/
+
+.profile-img > img {
+	width: 100%;
+}
+
+
+.about-text {
+	text-align: justify;
+    text-justify: inter-word;
+    font-size: 15px;
+}
+
+.gallery-wrapper {
+	overflow: scroll;
+	width: 100%;
+}
+
+.gallery {
+	/*max-width: 100%; */
+	
+	height: 400px;
+	/*display: block;*/
+	width: 10000px;
+
+
+}
+
+.gallery >img {
+	float: left;
+	height: 100%;
+	width: auto;
+	/*margin-left: 5px;*/
+	margin-right: 15px;
+}
+
+.artwork-subcat {
+	display: inline-block;
+	width: 100%;
+}
+
+.art-filter {
+	display: inline-block;
+	float: right;
+	margin-top: 30px;
+}
+
+.art-filter-tab {
+	width: auto;
+	float: left;
+	padding: 3px;
+	
+	margin-left: 3px;
+}
+
+.skill-icon {
+	/*width: 20%;*/
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 0;
+	/*margin-bottom: 40px;*/
+}
+.skill-icon > img {
+	/*margin-top: 20px;*/
+	width: 80%;
+	margin-top: 20px;
+	/*margin-left: 0%;*/
+	margin-right: 20%;
+	height: auto;
+
+	
+}
+
+.skill-icon > div {
+	
+}
+
+.skills-text {
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+#artwork-section {
+	margin-top: 25px;
+	padding-top: 25px;
+	font-size: 20px;
+}
+
+
+.dark-section {
+	background-color: #778997;
+	color: #fff;
+
+}
+
+#flickr-link {
+
+}
+
+.experience-job-title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.experience-entry {
+	margin-bottom: 30px;
+}
+
+.experience-position {
+	font-style: italic;
+	font-size: 18px;
+}
+
+/*
+
+.icon-shadow {
+	width:150px;
+	height:50px; 
+	border: solid 1px #555; 
+	background-color: transparent; 
+	box-shadow: 10px  rgba(0,0,0,0.6); 
+	-moz-box-shadow: 10px  rgba(0,0,0,0.6); 
+	-webkit-box-shadow: 10px  rgba(0,0,0,0.6); 
+	-o-box-shadow: 10px  rgba(0,0,0,0.6); 
+	border-radius:100px; } 
+}*/
+
+/* Screen size styling */
+
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px){
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px){
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px){
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
