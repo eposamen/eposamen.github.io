@@ -5,12 +5,13 @@ var earthwatch = new earthwatchObject;
 function earthwatchObject() {
 
 	this.init = function() {
-		console.log("in init");
+		//console.log("in init");
 		this.parallax();
-		this.colorRandom();
+		// this.colorRandom();
 		this.attachListeners();
 		this.setupGalleries();
-		console.log(this.artwork);
+		//this.jobLine();
+		
 			
 
 		// delegate calls to data-toggle="lightbox"
@@ -135,7 +136,7 @@ function earthwatchObject() {
 	this.setupGalleries = function() {
 		for (var i = 0; i < this.galleries.length; i++) {
 			var gallery = this.galleries[i];
-			console.log("gallery = "+gallery);
+			//console.log("gallery = "+gallery);
 			var galleryId = "#"+this.galleries[i];
 			for (var j = 0; j < this.artwork[gallery].length; j++) {
 				var imgString = "<img src="+this.artwork[gallery][j]["src"]+" alt="+this.artwork[gallery][j]["alt"]+" class = '"+this.artwork[gallery][j]["sub-gallery"]+"'>"
@@ -148,7 +149,7 @@ function earthwatchObject() {
 		};
 		$(".gallery").each(function() {
 			var artwork = $(".gallery").children();
-			console.log(artwork);
+			//console.log(artwork);
 			var totalWidth = 0;
 			var that = this;
 
@@ -156,7 +157,7 @@ function earthwatchObject() {
 				var url = $(this).attr("src");
 				$(artwork[i]).attr("src", url).load(function(){  
 					
-					console.log("outerWidth = "+$(this).width())
+					//console.log("outerWidth = "+$(this).width())
 					totalWidth = totalWidth + $(this).outerWidth(true);
 					
 					$(that).width(totalWidth);
@@ -169,10 +170,10 @@ function earthwatchObject() {
 			// 	var url = $(artwork[i]).attr("src");
 			// 	$(artwork[i]).attr("src", url).load(function(){  
 					
-			// 		console.log("outerWidth = "+$(this).width())
+			// 		//console.log("outerWidth = "+$(this).width())
 			// 		totalWidth = totalWidth + $(this).outerWidth(true);
 			// 		if (i+1 == artwork.length) {
-			// 			console.log("totalWidth = "+totalWidth);
+			// 			//console.log("totalWidth = "+totalWidth);
 			// 			$(that).width(totalWidth);
 			// 		};
 			// 	}); 
@@ -186,10 +187,54 @@ function earthwatchObject() {
 
 	}
 
+	this.jobLine = function() {
+		var that = this;
+		var nonDatedata = [
+			{"value": 1, "name": "Player 1", "jobTitle": "Next Jump (Cambridge, MA)", "job-Dates": "June - August 2015", "jobPosition": "Software Engineering and Web Development Intern" },
+			{"value": 2, "name": "Player 2", "jobTitle": "Next Jump (Cambridge, MA) 2", "job-Dates": "June - August 2015", "jobPosition": "Software Engineering and Web Development Intern" },
+			{"value": 3, "name": "Player 3", "jobTitle": "Next Jump (Cambridge, MA) 3", "job-Dates": "June - August 2015", "jobPosition": "Software Engineering and Web Development Intern" }
+		];
+		TimeKnots.draw("#jobline", nonDatedata, 
+						{
+							horizontalLayout: false, 
+							dateDimension:false, 
+							color: that.colorRandomGen(), 
+							subcolor: that.colorRandomGen(), 
+							width:500, 
+							showLabels: true, 
+							labelFormat: "%Y"});
+
+
+	}
+
 	this.attachListeners = function() {
-		// console.log("in attachListeners");
+		
+	    $("#wrapper").toggleClass("toggled");
+	    $(".menu-toggle").toggleClass("toggled");
+		$(".glyphicon-menu-hamburger").show();
+	    $(".glyphicon-remove").hide();
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	        $(".menu-toggle").toggleClass("toggled");
+	        if ($(".glyphicon-menu-hamburger").is(':visible')) {
+	        	
+	        	$(".glyphicon-menu-hamburger").hide();
+	        	$(".glyphicon-remove").show();
+	        	console.log("TEST 1");
+	        }
+	        else if ($(".glyphicon-remove").is(':visible')) {
+	 	
+	        	$(".glyphicon-menu-hamburger").show();
+	        	$(".glyphicon-remove").hide();
+	        	console.log("TEST 2");
+	        }
+
+	    });
+
+		// //console.log("in attachListeners");
 		$(".art-category").mouseover(function() {
-			// console.log("in mouseover");
+			// //console.log("in mouseover");
 			var clickText = $(this).find(".click-block");
 			//clickText.show();
 			//clickText.css("opacity", "1");
@@ -215,10 +260,17 @@ function earthwatchObject() {
 		        'slow');
 		});
 
+
+		$(window).scroll(function() {
+			$('.menu-toggle').css({'position':'fixed','top' :'0px'});
+			
+		});
+		
+
 		$(document).ready(function() {
 		   var windowH = $(window).height();
 		   var stickToBot = windowH - 50;
-		    console.log("stickToBot = "+stickToBot);
+		    //console.log("stickToBot = "+stickToBot);
 		    $('#nav-wrapper').css({'top': stickToBot + 'px'});
 		   
 		   $(window).scroll(function() {
@@ -240,7 +292,7 @@ function earthwatchObject() {
 	            count = count || 1;
 	            var pos = div.scrollLeft();
 	            div.scrollLeft(pos - count);
-	            console.log("scrolling left");
+	            //console.log("scrolling left");
 	        }, 7);
 	    }).click(function() {
 	        if (count < 6) {
@@ -260,7 +312,7 @@ function earthwatchObject() {
 	            count = count || 1;
 	            var pos = div.scrollLeft();
 	            div.scrollLeft(pos + count);
-	            console.log("scrolling right");
+	            //console.log("scrolling right");
 	        }, 7);
 	    }).click(function() {
 	        if (count < 6) {
@@ -306,22 +358,37 @@ function earthwatchObject() {
 
 	}
 
+
+	this.colorRandomGen = function() {
+		var colorbank = ["#fbcf85",
+						"#58A6CC",
+						"#FD4778",
+						"#C5D30F"];
+
+		var min = 0;
+		var max = colorbank.length - 1;
+
+		var colorIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+		var color = colorbank[colorIndex];
+		return color;
+	}
+
 	this.parallax = function() {
-	// console.log("in parallax");
+	// //console.log("in parallax");
     $.stellar.positionProperty.apple = {
         setTop: function($el, newTop, originalTop) {
             $el.css({
                 'top': $el.hasClass('ep-header') ? originalTop - (newTop/2) : originalTop,
                 'right': $el.hasClass('apple') ? originalTop - (newTop/2) : 0
             });
-            // console.log("newTop = "+newTop);
-            // console.log("originalTop = "+originalTop);
-            // console.log("originalTop - newTop = "+(originalTop - (newTop)));
-            // console.log("*********************");
+            // //console.log("newTop = "+newTop);
+            // //console.log("originalTop = "+originalTop);
+            // //console.log("originalTop - newTop = "+(originalTop - (newTop)));
+            // //console.log("*********************");
         },
         setRight: function($el, newRight, originalRight) {
             $el.css('right', newRight);
-            // console.log("newRight = "+newRight);
+            // //console.log("newRight = "+newRight);
         }
     };
     
@@ -338,6 +405,6 @@ function earthwatchObject() {
 
 
 $(document).ready(function() {
-    console.log( "ready!" );
+    //console.log( "ready!" );
     earthwatch.init();
 });
