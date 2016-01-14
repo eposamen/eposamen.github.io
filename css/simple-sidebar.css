@@ -19,6 +19,7 @@
 }
 
 #sidebar-wrapper {
+    color: #ececec;
     z-index: 1001;
     position: fixed;
     right: 250px;
@@ -26,34 +27,17 @@
     height: 100%;
     margin-right: -250px;
     overflow-y: auto;
-    background: rgba(255,255,255,1);
+    background: #778997;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    box-shadow: inset 7px 0 9px -7px rgba(0,120,160,0.4);
   /*  -moz-box-shadow: inset 0 -30px 30px -30px rgba(0,0,0,0.3);
     -webkit-box-shadow: inset 0 -30px 30px -30px rgba(0,0,0,0.3);
     box-shadow: inset 0 -30px 30px -30px rgba(0,0,0,0.3);*/
 }
 
-
-#sidebar-wrapper-glass {
-    z-index: 1000;
-    position: fixed;
-    right: 250px;
-    width: 0;
-    height: 100%;
-    margin-right: -250px;
-    overflow-y: auto;
-    
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
-    background: rgba(255,255,255,0.3);
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
 
 
 .menu-toggle {
@@ -115,7 +99,7 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #f7f7f7  ;
 }
 
 .sidebar-nav li a:hover {
@@ -136,7 +120,7 @@
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
+    color: #f7f7f7;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {

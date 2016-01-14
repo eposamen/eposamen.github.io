@@ -213,10 +213,12 @@ function earthwatchObject() {
 	    $(".menu-toggle").toggleClass("toggled");
 		$(".glyphicon-menu-hamburger").show();
 	    $(".glyphicon-remove").hide();
+
 	    $("#menu-toggle").click(function(e) {
 	        e.preventDefault();
 	        $("#wrapper").toggleClass("toggled");
 	        $(".menu-toggle").toggleClass("toggled");
+	        $(".continue-button").toggle()
 	        if ($(".glyphicon-menu-hamburger").is(':visible')) {
 	        	
 	        	$(".glyphicon-menu-hamburger").hide();

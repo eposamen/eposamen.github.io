@@ -338,12 +338,6 @@ svg.selectAll("text")
               if(cfg.horizontalLayout){
                 var datum = (cfg.dateDimension)?new Date(d.date).getTime():d.value;
                 var x=  Math.floor(step*(datum - minValue) + margin);
-                // if(d.radius) {
-                //   x = x + d.radius;
-                // } else {
-                //   x = x + cfg.radius;
-                // }
-                
                 return x + 150;
               } else {
                 var x = Math.floor(cfg.width/2);
@@ -358,9 +352,9 @@ svg.selectAll("text")
           })
           .text( function (d) { return d.jobTitle; })
           .attr("class", " experience-job-title")
-
-        
 ;
+
+
 
     //.append("image").style("float", "left").style("margin-right", "4px").attr("xlink:href", "images/javascript-icon.png").attr("width", "64px");
 
